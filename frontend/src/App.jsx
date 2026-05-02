@@ -17,7 +17,7 @@ function App() {
   React.useEffect(() => {
     const fetchTemplates = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/templates');
+        const response = await axios.get('/api/templates');
         setTemplates(response.data);
         if (response.data.length > 0) {
           setFormData(prev => ({ ...prev, template: response.data[0] }));
@@ -35,7 +35,7 @@ function App() {
     setSuccess(false);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/generate', formData, {
+      const response = await axios.post('/api/generate', formData, {
         responseType: 'blob'
       });
 
