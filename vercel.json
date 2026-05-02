@@ -1,14 +1,5 @@
 {
   "version": 2,
-  "experimentalServices": {
-    "frontend": {
-      "routePrefix": "/"
-    },
-    "backend": {
-      "entrypoint": "backend/app.py",
-      "routePrefix": "/_/backend"
-    }
-  },
   "builds": [
     {
       "src": "frontend/package.json",
